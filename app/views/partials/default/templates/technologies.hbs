@@ -1,0 +1,33 @@
+<section {{#if id}}id="{{id}}"{{/if}} class="{{#classes}}{{this}} {{/classes}}"
+         {{#if background}}style="background-image: url('{{background}}');"{{/if}}>
+    {{#if background}}
+        <div class="overlay"></div>
+    {{/if}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center section-heading">
+                {{#if title}}<h2 class="">{{{__ title}}}</h2>
+                    {{#if description}}<p class="text-muted">{{__ description}}</p>{{/if}}
+                    <hr>
+                {{/if}}
+            </div>
+        </div>
+        <div class="row text-center">
+            {{#itemList}}
+                <div class="col-xs-3 col-lg-{{#getCol ../itemsInRow}}{{/getCol}} dev-item none">
+                    <span class="{{iconClass}}" style="font-size: 65px"></span>
+                    <p class="text-muted">{{title}}</p>
+                </div>
+            {{/itemList}}
+        </div>
+
+        {{#if btn}}
+            <div class="row text-center">
+                <div class="col-xs-12">
+                    <a href="{{btn.url}}"
+                       class="btn btn-outline btn-xl">{{__ btn.text}}</a>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</section>

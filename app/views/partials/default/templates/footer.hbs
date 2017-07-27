@@ -1,0 +1,12 @@
+<footer>
+    <div class="container">
+        <ul class="list-inline">
+            {{#mainContext.menuLinks}}
+                <li >
+                    <a href="{{href}}" {{#if active}}class="active"{{/if}}>{{__ text}}</a>
+                </li>
+            {{/mainContext.menuLinks}}
+        </ul>
+        <p>&copy; 2017 Bezzubov Egor. All Rights Reserved.</p>
+    </div>
+</footer>

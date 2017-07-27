@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+{{> 'default/head'}}
+<main id="page-top" class="nav-md">
+{{#each sections}}
+    {{#if template}}
+        {{> (lookup . 'template') mainContext=../this}}
+    {{/if}}
+{{/each}}
+{{> 'default/scripts'}}
+</main>
+</html>

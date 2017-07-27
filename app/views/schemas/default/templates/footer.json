@@ -1,0 +1,15 @@
+{
+  "title": "Footer",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "template": {
+      "enum": ["default/templates/slogan"]
+    }
+  },
+  "required": [
+    "template"
+  ]
+}

@@ -1,0 +1,57 @@
+<section {{#if id}}id="{{id}}"{{/if}} class="{{#classes}}{{this}} {{/classes}}"
+         {{#if background}}style="background-image: url('{{background}}');"{{/if}}>
+    <div class="container">
+        <div class="row anim">
+            <div class="col-md-12 text-center section-heading">
+                {{#if title}}<h2 class="">{{__ title}}</h2>{{/if}}
+                {{#if description}}<p class="text-muted">{{__ description}}</p>{{/if}}
+                <hr>
+            </div>
+        </div>
+        {{#itemList}}
+            <div class="left-right-item anim">
+                <div class="row">
+                    {{#even @index}}
+                        <div class="col-md-5 col-md-offset-1 text-center">
+                            {{#if img}}
+                                {{#if url}}<a class="page-scroll" href="{{url}}">{{/if}}
+                                <img src="{{img}}">
+                                {{#if url}}</a>{{/if}}
+                            {{/if}}
+                        </div>
+                        <div class="col-md-5 ">
+                            {{#if url}}<a class="page-scroll" href="{{url}}">{{/if}}
+                            <h3>{{__ title}}</h3>
+                            {{#if url}}</a>{{/if}}
+                            <p class="text-muted">{{__ description}}</p>
+                        </div>
+                    {{else}}
+                        <div class="col-md-5 col-md-push-5 col-md-offset-1  text-center">
+                            {{#if img}}
+                                {{#if url}}<a class="page-scroll" href="{{url}}">{{/if}}
+                                <img src="{{img}}">
+                                {{#if url}}</a>{{/if}}
+                            {{/if}}
+                        </div>
+
+                        <div class="col-md-5 col-md-pull-5 ">
+                            {{#if url}}<a class="page-scroll" href="{{url}}">{{/if}}
+                            <h3>{{__ title}} </h3>
+                            {{#if url}}</a>{{/if}}
+                            <p class="text-muted">{{__ description}}</p>
+                        </div>
+                    {{/even}}
+                </div>
+            </div>
+        {{/itemList}}
+
+        {{#if btn}}
+            <div class="row  text-center">
+                <div class="col-xs-7">
+                    <a href="{{btn.url}}"
+                       class="btn btn-outline btn-xl">{{__ btn.text}}</a>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</section>

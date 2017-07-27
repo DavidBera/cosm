@@ -1,0 +1,35 @@
+{{#if_eq pages 1}}
+{{else}}
+    <div class="text-center">
+        {{#pagination page pages num}}
+            <ul class="pagination pagination-sm">
+                {{#unless startFromFirstPage}}
+                    <li>
+                        <a data-target="page"
+                           data-action="find-first" href="#">&laquo;</a></li>
+                {{/unless}}
+
+                {{#each pages}}
+                    {{#if isCurrent}}
+                        <li class="active">
+                            <a data-target="page"
+                               data-action="select"
+                               data-page="{{page}}" href="#">{{page}}</a></li>
+                    {{/if}}
+                    {{#unless isCurrent}}
+                        <li>
+                            <a data-target="page"
+                               data-action="select"
+                               data-page="{{page}}" href="#">{{page}}</a></li>
+                    {{/unless}}
+                {{/each}}
+
+                {{#unless endAtLastPage}}
+                    <li><a data-target="page"
+                           data-action="find-last"
+                           href="#">&raquo;</a></li>
+                {{/unless}}
+            </ul>
+        {{/pagination}}
+    </div>
+{{/if_eq}}

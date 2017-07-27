@@ -1,0 +1,20 @@
+<section {{#if id}}id="{{id}}"{{/if}} class="{{#classes}}{{this}} {{/classes}}"
+         {{#if background}}style="background-image: url('{{background}}');"{{/if}}>
+    <div class="container">
+        <div class="row">
+            <div class="anim">
+                {{#offices}}
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="office anim">
+                            <h3>{{__ title}}</h3>
+                            {{#each info}}
+                                <p class="text-muted"><b>{{@key}}:</b> {{__ this}}</p>
+                            {{/each}}
+                        </div>
+                    </div>
+                {{/offices}}
+            </div>
+        </div>
+    </div>
+</section>
+

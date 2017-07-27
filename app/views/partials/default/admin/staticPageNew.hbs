@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-8">
+        <div class="x_panel">
+            <h3><b>{{__ title}}</b></h3>
+            <form class="form-vertical">
+                <fieldset>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="pageName" placeholder="{{__ 'Page name'}}" value="{{mainContext.pageName}}">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="x_panel">
+            <textarea id="tiny">{{{mainContext.content}}}</textarea>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="x_panel">
+            <a href="#" class="btn btn-primary" id="{{#if mainContext.isEdit}}editPage{{else}}savePage{{/if}}">{{__ 'Save'}}</a>
+        </div>
+    </div>
+</div>

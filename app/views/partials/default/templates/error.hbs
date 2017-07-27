@@ -1,0 +1,11 @@
+<section {{#if id}}id="{{id}}"{{/if}} class="{{#classes}}{{this}} {{/classes}}">
+    <div class="container text-center">
+        <div class="row">
+            <h1>{{message}}</h1>
+            <h2 id="statusCode">{{status}}</h2>
+            {{#if error}}
+                <pre class="text-left">{{error.stack}}</pre>
+            {{/if}}
+        </div>
+    </div>
+</section>

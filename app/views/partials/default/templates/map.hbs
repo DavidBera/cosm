@@ -1,0 +1,10 @@
+<section {{#if id}}id="{{id}}"{{/if}} class="{{#classes}}{{this}} {{/classes}}"
+             {{#if background}}style="background-image: url('{{background}}');"{{/if}} style="padding:0px">
+    <div class="container-fluid" style="padding:0px">
+        <div class="row-fluid">
+            <div class="col-xs-12" style="padding:0px">
+                <div id="map" data-lat="{{coord.lat}}" data-lng="{{coord.lng}}" markerIcon="{{markerUrl}}" style="height:80vh;"></div>
+            </div>
+        </div>
+    </div>
+</section>

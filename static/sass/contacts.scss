@@ -1,0 +1,128 @@
+.form-group {
+  margin-bottom: 0px;
+}
+
+form .form-group .form-control {
+  margin: 14.5px 0 0 0;
+  padding: 15px;
+  height: 50px;
+  border-radius: 0;
+  font-size: 17px;
+  font-weight: 400;
+  color: #9DA8AF;
+  border-color: #9DA8AF;
+  box-shadow: inset 0px -2px 0px 0px #9DA8AF;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+form .form-group .form-control:focus {
+  border-color: #6DB33F;
+  box-shadow: inset 0px -2px 0px 0px #6DB33F;
+}
+
+form .form-group textarea.form-control {
+  height: 115px;
+}
+
+form .form-group .btn {
+  margin: 15px 0 0 0;
+}
+
+header .header-content .header-content-inner .office {
+  color: #63808D;
+  text-align: center;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  header .header-content .header-content-inner .office {
+    //color: #63808D;
+    //text-align: center;
+    padding-top: 50px;
+  }
+  //header .header-content .header-content-inner .office h2 {
+  //  font-size: 30px;
+  //}
+}
+
+header .header-content .header-content-inner .office p {
+  text-align: left;
+  color: #63808D;
+  margin-bottom: 5px;
+  font-size: 22px;
+  color: white;
+  text-shadow: 0 0 20px #000;
+}
+
+header .header-content .header-content-inner .office h2 {
+  text-shadow: 0 0 20px #000;
+  text-align: left;
+  font-size: 45px;
+  margin-top: 30px;
+  font-weight: 300;
+  color: white;
+}
+
+header .header-content .header-content-inner .office h3 {
+  text-shadow: 0 0 20px #000;
+  text-align: left;
+  font-size: 25px;
+  margin-top: 0px;
+  font-weight: 400;
+  color: #9EA9B0;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .office {
+    text-align: left;
+  }
+  header .header-content .header-content-inner .office h2 {
+    font-size: 30px;
+  }
+  header .header-content .header-content-inner .office p {
+    font-size: 17px;
+  }
+  header .header-content .header-content-inner .office h3 {
+    font-size: 19px;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+h2, h1 {
+  margin-top: 40px;
+}
+.contact-form {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding-top: 0px;
+  min-height: calc(100vh - 165px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.invalid-field {
+  border-color: rgba(165, 48, 48, 0.9) !important;
+  box-shadow: inset 0px -2px 0px 0px rgba(165, 48, 48, 0.9) !important;
+}
+
+.error-message {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-size: 13px;
+  margin-top: 0px;
+  padding: 3px 7px;
+  z-index: 1000;
+}
+
+.invalid-field-message~.error-message {
+  display: block;
+}

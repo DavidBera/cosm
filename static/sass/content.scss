@@ -1,0 +1,11 @@
+$primary-grey-color: #202A2F;
+
+.content {
+  padding-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .navbar-default {
+    background-color: $primary-grey-color;
+  }
+}

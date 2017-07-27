@@ -1,0 +1,19 @@
+{
+  "title": "Slogan",
+  "type": "object",
+  "properties": {
+    "slogan": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "template": {
+      "enum": ["default/templates/slogan"]
+    }
+  },
+  "required": [
+    "slogan",
+    "template"
+  ]
+}

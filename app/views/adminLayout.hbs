@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+{{> 'default/head'}}
+<body id="page-top" class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        {{> 'default/admin/adminMenu' mainContext=../this}}
+        {{!-- Page content --}}
+        <div class="right_col" role="main">
+            {{#each sections}}
+                {{#if template}}
+                    {{> (lookup . 'template') mainContext=../this}}
+                {{/if}}
+            {{/each}}
+        </div>
+        {{!-- Page content end --}}
+    </div>
+</div>
+{{> 'default/scripts'}}
+</body>
+</html>

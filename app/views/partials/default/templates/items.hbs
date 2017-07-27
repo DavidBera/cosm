@@ -1,0 +1,56 @@
+<section {{#if id}}id="{{id}}"{{/if}} class="{{#classes}}{{this}} {{/classes}}"
+         {{#if background}}style="background-image: url('{{background}}');"{{/if}}>
+    {{#if background}}
+        <div class="overlay"></div>
+    {{/if}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center section-heading">
+            {{#if title}}<h2 class="">{{{__ title}}}</h2>
+                {{#if description}}<p class="text-muted">{{__ description}}</p>{{/if}}
+                <hr>
+            {{/if}}
+        </div>
+    </div>
+    {{#itemList}}
+        {{#isFirstInRow @index ../itemsInRow}}
+        <div class="row ">
+        {{/isFirstInRow}}
+
+        <div class="col-sm-{{#getCol ../itemsInRow}}{{/getCol}}">
+            <div class="item none">
+                {{#if img}}
+                    {{#if url}}<a class="page-scroll" href="{{url}}">{{/if}}
+                    <img src="{{img}}">
+                    {{#if url}}</a>{{/if}}
+                {{else}}
+                    {{#if iconClass}}
+                        <span class="{{iconClass}}"></span>
+                    {{/if}}
+                {{/if}}
+
+                {{#if url}}<a class="page-scroll" href="{{url}}">{{/if}}
+                {{#if title}}<h3>{{__ title}} </h3>{{/if}}
+                {{#if url}}</a>{{/if}}
+                {{#if description}}<p class="text-muted">{{__ description}}</p>{{/if}}
+            </div>
+        </div>
+        {{#if @last}}
+        </div>
+        {{else}}
+            {{#isLastInRow @index ../itemsInRow}}
+            </div>
+            {{/isLastInRow}}
+        {{/if}}
+    {{/itemList}}
+
+    {{#if btn}}
+        <div class="row text-center">
+            <div class="col-xs-12">
+                <a href="{{btn.url}}"
+                   class="btn btn-outline btn-xl">{{__ btn.text}}</a>
+            </div>
+        </div>
+    {{/if}}
+    </div>
+</section>

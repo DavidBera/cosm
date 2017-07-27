@@ -1,0 +1,40 @@
+{
+  "NODE_PORT": 80,
+  "hbs":{
+    "partialsDir": "./app/views/partials"
+  },
+  "app": {
+    "options": {
+      "mainPage": "main"
+    }
+  },
+  "mongoose": {
+    "uri": "mongodb://127.0.0.1:27017/cosm",
+    "options": {
+      "quiet": true,
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      },
+      "auth": {
+        "authdb": "admin"
+      }
+    }
+  },
+  "session":{
+    "secret": "cosmSecretString",
+    "name": "sid",
+    "cookie":{
+      "path":"/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  },
+  "i18n":{
+    "cookie": "lang",
+    "queryParameter": "lang",
+    "directory": "./config/locales",
+    "autoReload": true
+  }
+}

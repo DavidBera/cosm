@@ -1,0 +1,13 @@
+<tr id="feedback-info" class="bg-grey">
+    <td colspan="4">
+        <ul class="list-group">
+            <li class="list-group-item"><b>{{__ 'Name'}}: </b><br/>{{name}}</li>
+            <li class="list-group-item"><b>{{__ 'Message'}}: </b>
+                <p>{{message}}</p></li>
+            <li class="list-group-item"><b>{{__ 'Message status'}}: </b><br/>{{status}}</li>
+            <li class="list-group-item"><i class="fa fa-envelope"></i> {{email}}</li>
+            {{#if phone}}
+                <li class="list-group-item"><i class="fa fa-phone"></i> {{phone}}</li>{{/if}}
+        </ul>
+    </td>
+</tr>

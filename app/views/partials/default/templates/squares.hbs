@@ -1,0 +1,53 @@
+<section {{#if id}}id="{{id}}" {{/if}} class="{{#classes}}{{this}} {{/classes}} full-screen" {{#if background}}style="background-image: url('{{background}}');"
+    {{/if}}>
+    {{#if background}}
+    <div class="overlay"></div>
+    {{/if}}
+    <div class="container-fluid">
+        <div class="row">
+            {{#items}}
+            <div class="col-sm-3 col-xs-12 rectangle square rectangle-xs">
+                <div class="rectangle__wrapper">
+                    <div class="rectangle__content" style="background-image: url('{{photo}}');">
+                        <div class="rectangle__content__caption">
+                            <h3><b>{{name}}</b></h3>
+                            <h4>{{post}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/items}}
+            <div class="col-sm-6 col-xs-6 rectangle square">
+                <div class="rectangle__wrapper">
+                    <div class="rectangle__content" style="background-image: url('https://s-media-cache-ak0.pinimg.com/originals/6c/b2/b1/6cb2b1f5b7a07a1088fa60bff56a526d.jpg');">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6 rectangle square">
+                <div class="rectangle__wrapper">
+                    <div class="rectangle__content" style="background-image: url('http://edge.alluremedia.com.au/m/l/2015/12/lightkb.jpg');">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6 rectangle square">
+                <div class="rectangle__wrapper">
+                    <div class="rectangle__content" style="background-image: url('https://images4.alphacoders.com/271/271298.jpg');">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-6 rectangle">
+                <div class="rectangle__wrapper">
+                    <div class="rectangle__content" style="background-image: url('http://www.wallpaperskid.com/wallpaper-images/190/coffee-cup-splash-wallpaper-hd-SJTbMv.jpg');">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{#if btn}}
+        <div class="row text-center">
+            <div class="col-xs-12">
+                <a href="{{btn.url}}" class="btn btn-outline btn-xl">{{__ btn.text}}</a>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</section>

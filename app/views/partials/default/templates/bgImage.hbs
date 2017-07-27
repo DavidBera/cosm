@@ -1,0 +1,10 @@
+<section {{#if id}}id="{{id}}"{{/if}} class="bg-image-section {{#classes}}{{this}} {{/classes}}"
+         {{#if background}}style="background-image: url('{{background}}');"{{/if}}>
+    <div class="contacts-content">
+        <div class="container">
+            {{#if title}}<h2>{{__ title}}</h2>{{/if}}
+            {{#if btn}}<a href="{{btn.url}}" class="btn btn-outline btn-xl">{{__ btn.text}}</a>{{/if}}
+        </div>
+    </div>
+    <div class="overlay"></div>
+</section>

@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-7">
+        <div class="x_panel">
+            <h3><b>{{__ 'Menu items'}}</b></h3>
+            <a href="#" class="btn btn-default" data-action="add" data-target="menu-item">
+                {{__ 'Add menu item'}}
+            </a>
+            <script id="menus"></script>
+        </div>
+        {{> 'default/admin/modals/deleteModal' header='Menu item delete' text='Are you sure you want to delete this menu item?'}}
+        {{> 'default/admin/modals/saveModal' header='Menu item save' text='Are you sure you want to save this menu item?'}}
+        {{> 'default/admin/modals/addMenuItemModal'}}
+    </div>
+</div>

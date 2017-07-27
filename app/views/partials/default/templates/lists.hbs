@@ -1,0 +1,54 @@
+<section {{#if id}}id="{{id}}" {{/if}} class="{{#classes}}{{this}} {{/classes}}" {{#if background}}style="background-image: url('{{background}}');"
+    {{/if}}>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center section-heading">
+                {{#if title}}
+                <h2 class="">{{__ title}}</h2>{{/if}} {{#if description}}
+                <p class="text-muted">{{__ description}}</p>{{/if}}
+                <hr>
+            </div>
+        </div>
+        {{#itemList}} {{#isFirstInRow @index 1}} {{/isFirstInRow}}
+        <div class="item itemFullWidth anim none">
+            <div class="row">
+                {{#if img}} {{#if url}}<a class="page-scroll" href="{{url}}">{{/if}}
+                <div class="col-sm-4"><img src="{{img}}"></div>
+                {{#if url}}</a>{{/if}} {{/if}}
+
+                <div class="col-sm-8">
+                    {{#if url}}
+                    <a class="page-scroll" href="{{url}}">
+                {{/if}}
+
+                <h3>{{__ title}}</h3>
+                {{#if url}}
+                </a> {{/if}} {{#if items}}
+                    <div class="col-xs-6 col-sm-6">
+                        <ul class="text-muted">
+                            {{#items}} {{#midItem @index ../items.length}}
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                        <ul class="text-muted">
+                            {{/midItem}}
+                            <li>{{__ this}}</li>
+                            {{/items}}
+                        </ul>
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+            {{#if @last}}
+        </div>
+        {{else}} {{#isLastInRow @index 1}}
+    </div>
+    {{/isLastInRow}} {{/if}} {{/itemList}} {{#if btn}}
+    <div class="row  text-center">
+        <div class="col-xs-12">
+            <a href="{{btn.url}}" class="btn btn-outline btn-xl">{{__ btn.text}}</a>
+        </div>
+    </div>
+    {{/if}}
+    </div>
+</section>

@@ -1,0 +1,67 @@
+<header {{#if fullScreen}}class="full-screen-height"{{/if}} style="background-image: url('{{background}}')">
+    <div class="overlay"></div>
+    <div class="header-container">
+        <div class="heading-container">
+            <div class="heading subcontainer">
+                <div>
+                    <div class="logo">
+                        {{#if logo.img}}<a href="{{logo.url}}"><img src="{{logo.img}}" alt=""/></a>{{/if}}
+                        <a {{#if logo.img}}class="brand"{{/if}} href="{{logo.url}}">{{{logo.text}}}</a>
+                    </div>
+
+                    <div class="right-content">
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="true">{{mainContext.lang}}
+                                <span class="fa fa-globe"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="?lang=ru">RU</a></li>
+                                <li><a href="?lang=en">EN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav>
+                <div class="row subcontainer menu">
+                    <button type="button" class="menu-toggle collapsed" data-toggle="collapse" data-target="#mainmenu"
+                            aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <ul class="hidden-xs" id="mainmenu">
+                        {{#mainContext.menuLinks}}
+                            <li {{#if active}}class="active"{{/if}}>
+                                <a href="{{href}}">{{__ text}}</a>
+                            </li>
+                        {{/mainContext.menuLinks}}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        {{#if fullScreen}}
+            <div class="header-content row hidden-xs">
+                <div class="header-content-inner">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            {{#if title}}<h1>{{__ title}}</h1>{{/if}}
+                            {{#if description}}<p>{{__ description}}</p>{{/if}}
+                        </div>
+                    </div>
+                    {{#if btn}}
+                        <a href="{{btn.url}}"
+                           class="btn btn-outline btn-xl page-scroll">{{__ btn.text}}</a>
+                    {{/if}}
+                </div>
+            </div>
+
+            <div class="scroll-arrow row hidden-xs">
+                <a href="#scroll" class="btn page-scroll"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+            </div>
+        {{/if}}
+    </div>
+</header>
+<div id="scroll"></div>
